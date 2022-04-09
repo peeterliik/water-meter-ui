@@ -1,15 +1,22 @@
-import CardItem from "./components/CardItem";
-import { Helmet } from "react-helmet";
+import "./App.scss";
+import "boxicons/css/boxicons.min.css";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import AppLayout from "./components/layout/AppLayout";
+import Dashboard from "./pages/Dashboard";
+import SendMail from "./pages/SendMail";
+import Settings from "./pages/Settings";
 
 function App() {
 	return (
-		<div>
-			<Helmet>
-				<style>{"body { background-color: white; }"}</style>
-			</Helmet>
-			<h2>Let's get started!</h2>
-			<CardItem></CardItem>
-		</div>
+		<BrowserRouter>
+			<Routes>
+				<Route path="/" element={<AppLayout />}>
+					<Route index element={<Dashboard />} />
+					<Route path="/mail" element={<SendMail />} />
+					<Route path="/settings" element={<Settings />} />
+				</Route>
+			</Routes>
+		</BrowserRouter>
 	);
 }
 

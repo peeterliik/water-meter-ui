@@ -1,0 +1,57 @@
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100px;
+    background-color: #373B53;
+
+    &__logo {
+        display: grid;
+        place-items: center;
+        height: 100px;
+        font-size: 2.5rem;
+        font-weight: 750;
+        background-color: #23B0FF;
+        color: white;
+        font-family: 'Arial';
+    }
+
+    &__menu {
+        position: relative;
+        top: 10vh;
+
+        &__item {
+            display: flex;
+            align-items: center;
+            place-content: start space-evenly;
+            padding: 1rem;
+            font-size: 1.25rem;
+            font-weight: 500;
+            color: #aaaaaa;
+            transition: color 0.3s ease-in-out;
+
+            &.active {
+                color: #23B0FF;
+            }
+
+            &__icon {
+                i {
+                    font-size: 1.75rem;
+                }
+            }
+        }
+
+        &__indicator {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            width: calc(100% - 40px);
+            border-radius: 10px;
+            background-color: #ffffff;
+            z-index: -1;
+            transform: translateX(-50%);
+            transition: 0.3s ease-in-out;
+        }
+    }
+}

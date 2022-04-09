@@ -1,8 +1,6 @@
-import "./CardItem.css";
+import "./CardItem.scss";
 
 function CardItem() {
-	const currentDate = new Date(2022, 2, 3);
-
 	return (
 		<div className="card-item">
 			<div>Header</div>
