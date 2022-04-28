@@ -1,6 +1,6 @@
 import fetch from "node-fetch";
 
-const url = "localhost:3000"; //TO-DO Update when service up
+const url = "http://localhost:3008"; //TO-DO Update when service up
 
 export const getConsumptionCurrentMonth = async () => {
 	const response = await fetch(url + "/consumption/month");
@@ -17,7 +17,7 @@ export const getConsumptionMonth = async (month, year) => {
 };
 
 export const getLatest = async () => {
-	const response = await fetch(url + "/readings/latest");
+	const response = await fetch("http://localhost:3008/readings/latest");
 	const data = await response.json();
 	return data;
 };
