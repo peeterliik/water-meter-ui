@@ -1,4 +1,5 @@
 import Header from "../components/header/Header";
+import RecipientCard from "../components/cards/RecipientCard";
 import SendCard from "../components/cards/SendCard";
 import React, { useEffect, useState } from "react";
 import { getUser } from "../utils/controllers/endpoints";
@@ -25,17 +26,17 @@ const SendMail = () => {
 
 	useEffect(() => {
 		getUserSettings();
-		console.log(user.recipient);
 	}, []);
 
 	return (
 		<div>
 			<Header pageName={pageName} address={user.address}></Header>
 			<div className="cards">
-				<SendCard
+				<RecipientCard
 					headerName={"Recipient E-mail"}
 					email={user.recipient}
-				></SendCard>
+				></RecipientCard>
+				<SendCard headerName={"Send reading"} email={user.recipient}></SendCard>
 			</div>
 		</div>
 	);

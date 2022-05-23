@@ -19,26 +19,26 @@
 }
 
 .send-container {
-	padding: 20px 16px;
+	padding: 6px 16px;
 	position: relative;
 	top: 0;
 	left: 0;
 }
 
-.select-year-month {
-	font-size: 18px;
-	padding: 10px;
-	display: flex;
-}
-
-label {
+.send-current {
+	font-size: 20px;
 	padding: 10px;
 }
 
-select {
+.newemail-form {
+	font-size: 20px;
+	padding: 10px;
+}
+
+input {
 	border-radius: 8px;
-	font-size: 18px;
-	padding: 6px;
+	font-size: 15px;
+	padding: 10px;
 }
 
 button {

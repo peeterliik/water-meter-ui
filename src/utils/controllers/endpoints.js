@@ -95,17 +95,22 @@ export const getReadingCurrentMonth = async () => {
 
 export const getReadingMonth = async (month, year) => {
 	const response = await fetch(
-		url + "/readindmonth?month=" + month + "&year=" + year
+		url + "/readingmonth?month=" + month + "&year=" + year
 	);
 	const data = await response.json();
 	return data;
 };
 
-//body = { id?: _id, email: _email, value?: _value, month?: _month }
+//body = { id?: _id, email: _email, value?: _value, month?: _month, year?: _year }
 export const putSendReading = async (payload) => {
+	const reading = await getReadingMonth(
+		monthNames.indexOf(payload.month),
+		payload.year
+	);
+	const sendPayload = { id: reading._id, email: payload.email };
 	const response = await fetch(url + "/send", {
 		method: "PATCH",
-		body: JSON.stringify(payload),
+		body: JSON.stringify(sendPayload),
 		headers: { "Content-Type": "application/json" },
 	});
 	const data = await response.json();
