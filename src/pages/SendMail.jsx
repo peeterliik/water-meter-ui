@@ -1,6 +1,7 @@
 import Header from "../components/header/Header";
 import RecipientCard from "../components/cards/RecipientCard";
 import SendCard from "../components/cards/SendCard";
+import ScheduleCard from "../components/cards/ScheduleCard";
 import React, { useEffect, useState } from "react";
 import { getUser } from "../utils/controllers/endpoints";
 
@@ -37,6 +38,10 @@ const SendMail = () => {
 					email={user.recipient}
 				></RecipientCard>
 				<SendCard headerName={"Send reading"} email={user.recipient}></SendCard>
+				<ScheduleCard
+					headerName={"Schedule sending"}
+					schedule={user.schedule}
+				></ScheduleCard>
 			</div>
 		</div>
 	);

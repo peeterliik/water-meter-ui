@@ -1,0 +1,59 @@
+.setting-item {
+	min-width: 450px;
+	height: 350px;
+	display: flex;
+	margin: 10px;
+	flex-direction: column;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+	border-radius: 12px;
+	background-color: #ffffff;
+}
+
+.setting-header {
+	height: 12%;
+	border-radius: 12px 12px 0px 0px;
+	background: #23b0ff;
+	color: white;
+	text-align: start;
+	padding: 10px 16px;
+}
+
+.setting-container {
+	padding: 6px 16px;
+	position: relative;
+	top: 0;
+	left: 0;
+}
+
+.setting-current {
+	margin-top: 20px;
+	font-size: 17px;
+	padding: 10px;
+}
+
+.setting-form {
+	font-size: 17px;
+	padding: 10px;
+	margin-top: 10px;
+	margin-bottom: 20px;
+}
+
+input {
+	border-radius: 8px;
+	font-size: 17px;
+	padding: 10px;
+}
+
+button {
+	background-color: #23b0ff;
+	border: none;
+	border-radius: 4px;
+	color: white;
+	padding: 10px;
+	margin-left: 20px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 17px;
+	cursor: pointer;
+}

@@ -38,12 +38,6 @@ const months = [
 	"December",
 ];
 
-const dataMonths = [
-	{ name: "Geeksforgeeks", students: 400 },
-	{ name: "Technical scripter", students: 700 },
-	{ name: "Geek-o-mania", students: 1000 },
-];
-
 const pageName = "Dashboard";
 
 const getPreviousMonth = () => {

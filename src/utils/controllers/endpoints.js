@@ -1,21 +1,7 @@
 import fetch from "node-fetch";
+import { monthNames } from "../constants";
 
 const url = "http://localhost:3008"; //TO-DO Update when service up
-
-const monthNames = [
-	"Jan",
-	"Feb",
-	"Mar",
-	"Apr",
-	"May",
-	"Jun",
-	"Jul",
-	"Aug",
-	"Sep",
-	"Oct",
-	"Nov",
-	"Dec",
-];
 
 export const getUser = async () => {
 	const response = await fetch(url + "/user");

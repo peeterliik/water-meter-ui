@@ -16,6 +16,7 @@
 		"@testing-library/user-event": "^12.5.0",
 		"boxicons": "^2.1.2",
 		"buffer": "^6.0.3",
+		"cron": "^2.0.0",
 		"d3-scale": "^4.0.2",
 		"d3-shape": "^3.1.0",
 		"esm": "^3.2.25",
